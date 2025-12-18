@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
+import { useState } from "react";
+import CustomDropdown from "@/components/ui/CustomDropdown";
 
 export default function ContactPage() {
+  const [projectType, setProjectType] = useState("Video Production");
   const whatsappNumber = "61400000000";
   const whatsappMessage = encodeURIComponent("Hi Roo Filmz! I'm interested in discussing a project with you.");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
@@ -96,16 +99,12 @@ export default function ContactPage() {
                     />
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-black/40">Project Type</label>
-                  <select className="w-full px-6 py-4 bg-brand-gray-50 rounded-xl border-none focus:ring-2 focus:ring-brand-orange transition-all appearance-none">
-                    <option>Video Production</option>
-                    <option>Video Production (AI)</option>
-                    <option>Web Development</option>
-                    <option>Social Media Marketing</option>
-                    <option>Other</option>
-                  </select>
-                </div>
+                <CustomDropdown 
+                  label="Project Type"
+                  options={["Video Production", "Video Production (AI)", "Web Development", "Social Media Marketing", "Other"]}
+                  value={projectType}
+                  onChange={setProjectType}
+                />
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-widest text-black/40">Message</label>
                   <textarea 

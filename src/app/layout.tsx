@@ -16,14 +16,17 @@ const syne = Syne({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+const isProd = process.env.NODE_ENV === 'production';
+const assetPrefix = isProd ? '/roofilmz' : '';
+
 export const metadata: Metadata = {
   title: "Roo Filmz | Premium Video Production & Digital Content",
   description: "Roo Filmz is a premium video production company specializing in cinematic storytelling, digital content, and creative media solutions.",
   keywords: "video production, cinematography, digital content, Roo Filmz, Australia, creative agency",
   icons: {
-    icon: "/roofilmz/assets/logo.webp",
-    shortcut: "/roofilmz/assets/logo.webp",
-    apple: "/roofilmz/assets/logo.webp",
+    icon: `${assetPrefix}/assets/logo.webp`,
+    shortcut: `${assetPrefix}/assets/logo.webp`,
+    apple: `${assetPrefix}/assets/logo.webp`,
   },
 };
 
