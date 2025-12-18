@@ -4,31 +4,32 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import ContactCTA from "@/components/sections/ContactCTA";
 import { CheckCircle2 } from "lucide-react";
+import { getAssetPath } from "@/lib/assets";
 
 const services = [
   {
     title: "Video Production",
     description: "Our core expertise lies in high-end cinematography. We use industry-standard gear to capture breathtaking visuals that tell a story.",
     features: ["Cinematic Storytelling", "Professional Lighting", "Directing & Scripting", "Sound Design"],
-    image: "/assets/Ultrarealistic_8k_redcamera_202512101411_(1).jpeg",
+    image: getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512101411_(1).jpeg"),
   },
   {
     title: "Video Production (AI)",
     description: "Leveraging the power of artificial intelligence to push the boundaries of film. From AI-assisted editing to synthetic media creation.",
     features: ["AI Video Generation", "Advanced Upscaling", "Deep Learning VFX", "Automated Editing"],
-    image: "/assets/Ultrarealistic_8k_redcamera_202512121551.jpeg",
+    image: getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512121551.jpeg"),
   },
   {
     title: "Web Development",
     description: "We build modern, fast, and responsive websites that serve as the digital foundation for your brand's growth.",
     features: ["Next.js & React", "E-commerce Solutions", "Custom Web Apps", "SEO Optimization"],
-    image: "/assets/Ultrarealistic_8k_redcamera_202512101418.jpeg",
+    image: getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512101418.jpeg"),
   },
   {
     title: "Social Media Marketing",
     description: "Strategic content handling and marketing to ensure your brand dominates the social conversation and reaches the right audience.",
     features: ["Account Management", "Content Strategy", "Paid Advertising", "Engagement Growth"],
-    image: "/assets/Use_blue_mob_202512101840.jpeg",
+    image: getAssetPath("/assets/Use_blue_mob_202512101840.jpeg"),
   },
 ];
 

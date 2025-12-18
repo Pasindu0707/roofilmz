@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { getAssetPath } from "@/lib/assets";
 
 export default function AboutPreview() {
   return (
@@ -47,7 +48,7 @@ export default function AboutPreview() {
           className="relative aspect-square md:aspect-[4/5] overflow-hidden rounded-2xl"
         >
           <Image
-            src="/assets/Ultrarealistic_8k_redcamera_202512121551.jpeg"
+            src={getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512121551.jpeg")}
             alt="Modern Creative Studio"
             fill
             className="object-cover transition-transform duration-700 hover:scale-110"

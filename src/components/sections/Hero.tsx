@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/assets";
 
 export default function Hero() {
   return (
@@ -16,7 +17,7 @@ export default function Hero() {
           playsInline
           className="w-full h-full object-cover opacity-60"
         >
-          <source src="/assets/roofilmz_shots_001.MP4" type="video/mp4" />
+          <source src={getAssetPath("/assets/roofilmz_shots_001.MP4")} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black" />

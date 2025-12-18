@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   description: "Roo Filmz is a premium video production company specializing in cinematic storytelling, digital content, and creative media solutions.",
   keywords: "video production, cinematography, digital content, Roo Filmz, Australia, creative agency",
   icons: {
-    icon: "/assets/logo.webp",
-    shortcut: "/assets/logo.webp",
-    apple: "/assets/logo.webp",
+    icon: "/roofilmz/assets/logo.webp",
+    shortcut: "/roofilmz/assets/logo.webp",
+    apple: "/roofilmz/assets/logo.webp",
   },
 };
 

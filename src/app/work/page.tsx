@@ -4,18 +4,19 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import ContactCTA from "@/components/sections/ContactCTA";
+import { getAssetPath } from "@/lib/assets";
 
 const categories = ["All", "Commercial", "Brand Film", "Social", "Music Video"];
 
 const galleryItems = [
-  { id: 1, title: "Modern Tech", category: "Commercial", type: "image", src: "/assets/Ultrarealistic_8k_redcamera_202512121551.jpeg" },
-  { id: 2, title: "Urban Pulse", category: "Social", type: "video", src: "/assets/v_don_dada_rootv.MP4", poster: "/assets/Ultrarealistic_8k_redcamera_202512101839.jpeg" },
-  { id: 3, title: "The Studio", category: "Brand Film", type: "image", src: "/assets/Ultrarealistic_8k_redcamera_202512101413.jpeg" },
-  { id: 4, title: "Cinematic Gear", category: "Commercial", type: "image", src: "/assets/Ultrarealistic_8k_redcamera_202512101411_(1).jpeg" },
-  { id: 5, title: "Night Vibes", category: "Music Video", type: "image", src: "/assets/Ultrarealistic_8k_redcamera_202512101839.jpeg" },
-  { id: 6, title: "Product Focus", category: "Commercial", type: "image", src: "/assets/Ultrarealistic_8k_redcamera_202512101418.jpeg" },
-  { id: 7, title: "Action Shot", category: "Social", type: "image", src: "/assets/Ultrarealistic_8k_redcamera_202512071356.jpeg" },
-  { id: 8, title: "Production Day", category: "Brand Film", type: "image", src: "/assets/IMG_4617.JPG" },
+  { id: 1, title: "Modern Tech", category: "Commercial", type: "image", src: getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512121551.jpeg") },
+  { id: 2, title: "Urban Pulse", category: "Social", type: "video", src: getAssetPath("/assets/v_don_dada_rootv.MP4"), poster: getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512101839.jpeg") },
+  { id: 3, title: "The Studio", category: "Brand Film", type: "image", src: getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512101413.jpeg") },
+  { id: 4, title: "Cinematic Gear", category: "Commercial", type: "image", src: getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512101411_(1).jpeg") },
+  { id: 5, title: "Night Vibes", category: "Music Video", type: "image", src: getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512101839.jpeg") },
+  { id: 6, title: "Product Focus", category: "Commercial", type: "image", src: getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512101418.jpeg") },
+  { id: 7, title: "Action Shot", category: "Social", type: "image", src: getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512071356.jpeg") },
+  { id: 8, title: "Production Day", category: "Brand Film", type: "image", src: getAssetPath("/assets/IMG_4617.JPG") },
 ];
 
 export default function WorkPage() {

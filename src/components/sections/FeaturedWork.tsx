@@ -4,30 +4,31 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { getAssetPath } from "@/lib/assets";
 
 const projects = [
   {
     title: "Urban Motion",
     category: "Commercial",
-    image: "/assets/Ultrarealistic_8k_redcamera_202512101839.jpeg",
+    image: getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512101839.jpeg"),
     link: "/work",
   },
   {
     title: "The Visionary",
     category: "Brand Film",
-    image: "/assets/Ultrarealistic_8k_redcamera_202512101413.jpeg",
+    image: getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512101413.jpeg"),
     link: "/work",
   },
   {
     title: "Ethereal Landscapes",
     category: "Cinematography",
-    image: "/assets/Ultrarealistic_8k_redcamera_202512101408.jpeg",
+    image: getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512101408.jpeg"),
     link: "/work",
   },
   {
     title: "Future Pulse",
     category: "Digital Content",
-    image: "/assets/Ultrarealistic_8k_redcamera_202512101418.jpeg",
+    image: getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512101418.jpeg"),
     link: "/work",
   },
 ];

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ContactCTA from "@/components/sections/ContactCTA";
+import { getAssetPath } from "@/lib/assets";
 
 export default function AboutPage() {
   return (
@@ -10,7 +11,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-black text-white">
         <Image
-          src="/assets/Ultrarealistic_8k_redcamera_202512121539.jpeg"
+          src={getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512121539.jpeg")}
           alt="About Roo Filmz"
           fill
           className="object-cover opacity-50"
@@ -65,18 +66,18 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <div className="relative h-64 rounded-2xl overflow-hidden">
-                <Image src="/assets/IMG_7416.JPG" alt="Behind the scenes" fill className="object-cover" />
+                <Image src={getAssetPath("/assets/IMG_7416.JPG")} alt="Behind the scenes" fill className="object-cover" />
               </div>
               <div className="relative h-48 rounded-2xl overflow-hidden">
-                <Image src="/assets/IMG_7418.JPG" alt="Behind the scenes" fill className="object-cover" />
+                <Image src={getAssetPath("/assets/IMG_7418.JPG")} alt="Behind the scenes" fill className="object-cover" />
               </div>
             </div>
             <div className="pt-8 space-y-4">
               <div className="relative h-48 rounded-2xl overflow-hidden">
-                <Image src="/assets/IMG_7419.JPG" alt="Behind the scenes" fill className="object-cover" />
+                <Image src={getAssetPath("/assets/IMG_7419.JPG")} alt="Behind the scenes" fill className="object-cover" />
               </div>
               <div className="relative h-64 rounded-2xl overflow-hidden">
-                <Image src="/assets/IMG_7425.JPG" alt="Behind the scenes" fill className="object-cover" />
+                <Image src={getAssetPath("/assets/IMG_7425.JPG")} alt="Behind the scenes" fill className="object-cover" />
               </div>
             </div>
           </div>
