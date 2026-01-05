@@ -42,9 +42,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-8xl font-display font-bold text-white mb-8 tracking-tighter leading-[0.9]"
         >
-          WE CAPTURE <br />
-          <span className="text-brand-orange italic">THE MOTION</span> <br />
-          OF YOUR STORY
+          YOUR STORY, <br />
+          <span className="text-brand-orange italic">ENGINEERED</span> TO MOVE <br />
+          THE WORLD
         </motion.h1>
 
         <motion.p

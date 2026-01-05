@@ -2,7 +2,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  ...(isProd && { output: 'export' }),
   basePath: isProd ? '/roofilmz' : '',
   images: {
     unoptimized: true,

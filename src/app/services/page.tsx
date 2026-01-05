@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ContactCTA from "@/components/sections/ContactCTA";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Search, PenTool, Rocket, TrendingUp } from "lucide-react";
 import { getAssetPath } from "@/lib/assets";
 
 const services = [
@@ -37,12 +37,12 @@ export default function ServicesPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-black text-white py-24 md:py-40 px-6">
+      <section className="bg-black text-white py-16 md:py-24 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-8xl font-display font-bold mb-8 tracking-tighter"
+            className="text-3xl md:text-5xl font-display font-bold mb-8 tracking-tighter"
           >
             WHAT <span className="text-brand-orange">WE DO</span>
           </motion.h1>
@@ -50,7 +50,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto leading-relaxed"
+            className="text-base md:text-lg text-white/60 max-w-3xl mx-auto leading-relaxed"
           >
             From cinematic masterpieces to digital dominance, we provide 
             end-to-end solutions that elevate your brand.
@@ -58,9 +58,86 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* How It Works */}
+      <section className="py-16 md:py-24 px-6 bg-brand-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-black/10 bg-black/5">
+              <span className="text-black text-xs font-bold uppercase tracking-widest">
+                Our Process
+              </span>
+            </div>
+            <h2 className="text-2xl md:text-4xl font-display font-bold text-black mb-6 tracking-tight">
+              HOW IT <span className="text-brand-orange">WORKS</span>
+            </h2>
+            <p className="text-base md:text-lg text-black/60 max-w-2xl mx-auto">
+              A streamlined approach to delivering exceptional results
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                number: "01",
+                icon: Search,
+                title: "Discovery & Strategy",
+                description: "We begin with in-depth research into your brand, target audience, and market landscape. Through consultation and analysis, we develop a comprehensive strategy tailored to your goals.",
+              },
+              {
+                number: "02",
+                icon: PenTool,
+                title: "Content Creation",
+                description: "Our creative team brings the strategy to life through high-quality video production, web development, and digital content that captures your brand's unique voice and vision.",
+              },
+              {
+                number: "03",
+                icon: Rocket,
+                title: "Launch & Distribution",
+                description: "We deploy your content across all relevant channels, ensuring maximum reach and engagement. From social media to web platforms, we optimize every touchpoint.",
+              },
+              {
+                number: "04",
+                icon: TrendingUp,
+                title: "Optimize & Scale",
+                description: "Continuous monitoring and analysis allows us to refine strategies, improve performance, and scale successful campaigns to drive sustained growth for your brand.",
+              },
+            ].map((step, index) => (
+              <motion.div
+                key={step.number}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="relative"
+              >
+                <div className="bg-white p-8 rounded-2xl border border-black/5 h-full flex flex-col">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className="w-14 h-14 bg-brand-orange/10 rounded-xl flex items-center justify-center">
+                      <step.icon size={28} className="text-brand-orange" />
+                    </div>
+                    <span className="text-brand-orange font-display font-bold text-3xl opacity-20">
+                      {step.number}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-display font-bold text-black mb-4">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-black/60 leading-relaxed flex-grow">
+                    {step.description}
+                  </p>
+                </div>
+                {index < 3 && (
+                  <div className="hidden lg:block absolute top-16 -right-4 w-8 h-0.5 bg-brand-orange/30 z-10" />
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services List */}
-      <section className="py-24 md:py-40 px-6 bg-white">
-        <div className="max-w-7xl mx-auto space-y-32 md:space-y-48">
+      <section className="py-16 md:py-24 px-6 bg-white">
+        <div className="max-w-7xl mx-auto space-y-20 md:space-y-32">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -68,18 +145,18 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
-              className={`flex flex-col lg:flex-row items-center gap-16 ${
+              className={`flex flex-col lg:flex-row items-center gap-12 ${
                 index % 2 === 1 ? "lg:flex-row-reverse" : ""
               }`}
             >
               <div className="flex-1">
-                <div className="text-brand-orange font-bold text-sm uppercase tracking-[0.3em] mb-4">
+                <div className="text-brand-orange font-bold text-sm uppercase tracking-[0.3em] mb-3">
                   0{index + 1} / Service
                 </div>
-                <h2 className="text-4xl md:text-5xl font-display font-bold text-black mb-8 tracking-tight leading-tight">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-black mb-6 tracking-tight leading-tight">
                   {service.title}
                 </h2>
-                <p className="text-xl text-black/60 mb-10 leading-relaxed">
+                <p className="text-base md:text-lg text-black/60 mb-8 leading-relaxed">
                   {service.description}
                 </p>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -91,7 +168,7 @@ export default function ServicesPage() {
                   ))}
                 </ul>
               </div>
-              <div className="flex-1 relative aspect-[4/3] w-full overflow-hidden rounded-3xl group">
+              <div className="flex-1 relative aspect-[4/3] w-full overflow-hidden rounded-2xl group">
                 <Image
                   src={service.image}
                   alt={service.title}
