@@ -12,7 +12,8 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         brand: {
-          orange: "#E19B1A", // Based on the logo
+          orange: "#ffc700", // Updated yellow color
+          "orange-light": "#FFF8D6", // Lighter yellow background
           black: "#000000",
           white: "#FFFFFF",
           gray: {

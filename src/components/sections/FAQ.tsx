@@ -47,23 +47,55 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-16 md:py-24 px-6 bg-white">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 bg-white">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-black/10 bg-black/5">
-            <span className="text-black text-xs font-bold uppercase tracking-widest">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-8 sm:mb-10 md:mb-12"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="inline-block px-3 sm:px-4 py-1.5 mb-4 sm:mb-6 rounded-full border border-black/10 bg-black/5"
+          >
+            <span className="text-black text-[10px] sm:text-xs font-bold uppercase tracking-widest">
               Frequently Asked Questions
             </span>
-          </div>
-          <h2 className="text-2xl md:text-4xl font-display font-bold text-black mb-6 tracking-tight">
-            QUESTIONS? <span className="text-brand-orange">WE'VE GOT ANSWERS</span>
-          </h2>
-          <p className="text-base md:text-lg text-black/60 max-w-2xl mx-auto">
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold text-black mb-4 sm:mb-6 tracking-tight px-2"
+          >
+            QUESTIONS? <motion.span
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="text-brand-orange"
+            >
+              WE'VE GOT ANSWERS
+            </motion.span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-sm sm:text-base md:text-lg text-black/60 max-w-2xl mx-auto px-2"
+          >
             Everything you need to know about working with Roo Filmz
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
@@ -75,14 +107,14 @@ export default function FAQ() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-black/5 transition-colors"
+                className="w-full px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between text-left hover:bg-black/5 transition-colors gap-3"
               >
-                <span className="font-bold text-base md:text-lg text-black pr-4">
+                <span className="font-bold text-sm sm:text-base md:text-lg text-black pr-2 sm:pr-4 flex-1 text-left">
                   {faq.question}
                 </span>
                 <ChevronDown
-                  size={20}
-                  className={`flex-shrink-0 text-brand-orange transition-transform duration-300 ${
+                  size={18}
+                  className={`flex-shrink-0 text-brand-orange transition-transform duration-300 w-4 h-4 sm:w-5 sm:h-5 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                 />
@@ -96,8 +128,8 @@ export default function FAQ() {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-5 pt-0">
-                      <p className="text-sm md:text-base text-black/60 leading-relaxed">
+                    <div className="px-4 sm:px-6 pb-4 sm:pb-5 pt-0">
+                      <p className="text-xs sm:text-sm md:text-base text-black/60 leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>

@@ -35,18 +35,19 @@ export default function CustomDropdown({ options, value, onChange, label }: Cust
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "w-full px-6 py-4 bg-brand-gray-50 rounded-xl flex items-center justify-between transition-all border-2",
-          isOpen ? "border-brand-orange ring-4 ring-brand-orange/10" : "border-transparent hover:bg-black/5"
+          "w-full px-4 sm:px-5 md:px-6 py-3 sm:py-3.5 md:py-4 bg-brand-gray-50 rounded-xl flex items-center justify-between transition-all border-2 text-sm sm:text-base",
+          isOpen ? "border-brand-orange ring-2 sm:ring-4 ring-brand-orange/10" : "border-transparent hover:bg-black/5"
         )}
       >
-        <span className={cn("text-base", !value && "text-black/40")}>
+        <span className={cn("flex-1 text-left", !value && "text-black/40")}>
           {value || "Select a service"}
         </span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3, ease: "circOut" }}
+          className="flex-shrink-0 ml-2"
         >
-          <ChevronDown size={20} className={cn("transition-colors", isOpen ? "text-brand-orange" : "text-black/40")} />
+          <ChevronDown size={18} className={cn("sm:w-5 sm:h-5 transition-colors", isOpen ? "text-brand-orange" : "text-black/40")} />
         </motion.div>
       </button>
 
@@ -58,7 +59,7 @@ export default function CustomDropdown({ options, value, onChange, label }: Cust
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="absolute z-50 w-full mt-2 bg-white rounded-2xl shadow-2xl border border-black/5 overflow-hidden p-2"
+            className="absolute z-50 w-full mt-2 bg-white rounded-2xl shadow-2xl border border-black/5 overflow-hidden p-1.5 sm:p-2"
           >
             {options.map((option) => (
               <button
@@ -69,7 +70,7 @@ export default function CustomDropdown({ options, value, onChange, label }: Cust
                   setIsOpen(false);
                 }}
                 className={cn(
-                  "w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-colors mb-1 last:mb-0",
+                  "w-full text-left px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-medium transition-colors mb-1 last:mb-0",
                   value === option 
                     ? "bg-brand-orange text-black font-bold" 
                     : "hover:bg-brand-gray-50 text-black/70 hover:text-black"

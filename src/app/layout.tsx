@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/ui/ScrollToTop";
+import ScrollProgress from "@/components/ui/ScrollProgress";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${syne.variable} antialiased font-sans`}>
+        <ScrollProgress />
         <Navbar />
         <main className="min-h-screen">
           {children}
