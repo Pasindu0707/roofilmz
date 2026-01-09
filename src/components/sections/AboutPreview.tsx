@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { useRef } from "react";
 import { getAssetPath } from "@/lib/assets";
-import { cardHover, fadeUp, slideLeft, underline, viewportOnce } from "@/animations/motionVariants";
+import { fadeUp, slideLeft, underline, viewportOnce } from "@/animations/motionVariants";
 
 export default function AboutPreview() {
   const ref = useRef<HTMLDivElement>(null);
@@ -127,9 +127,9 @@ export default function AboutPreview() {
         >
           <motion.div
             whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.99 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="relative w-full h-full"
-            {...cardHover}
           >
             <Image
               src={getAssetPath("/assets/Ultrarealistic_8k_redcamera_202512121551.jpeg")}
