@@ -59,8 +59,10 @@ export default function ServicesPreview() {
             </motion.h3>
             <motion.div 
               className="relative bg-black border-2 border-brand-orange/30 rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 overflow-hidden group-hover:border-brand-orange transition-all duration-500"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ 
+                scale: 1.02,
+                transition: { duration: 0.3 }
+              }}
             >
               {/* Animated background glow */}
               <div className="absolute inset-0 bg-gradient-to-r from-brand-orange/5 via-transparent to-brand-orange/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -118,8 +120,11 @@ export default function ServicesPreview() {
               {/* Social Media Management */}
               <motion.div 
                 className="group relative bg-black border-2 border-brand-orange/30 rounded-2xl p-6 sm:p-8 md:p-10 overflow-hidden cursor-pointer"
-                whileHover={{ scale: 1.03, borderColor: "#ffc700" }}
-                transition={{ duration: 0.3 }}
+                whileHover={{ 
+                  scale: 1.03, 
+                  borderColor: "#ffc700",
+                  transition: { duration: 0.3 }
+                }}
               >
                 {/* Hover glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -147,8 +152,11 @@ export default function ServicesPreview() {
               {/* Website & Digital Marketing */}
               <motion.div 
                 className="group relative bg-black border-2 border-brand-orange/30 rounded-2xl p-6 sm:p-8 md:p-10 overflow-hidden cursor-pointer"
-                whileHover={{ scale: 1.03, borderColor: "#ffc700" }}
-                transition={{ duration: 0.3 }}
+                whileHover={{ 
+                  scale: 1.03, 
+                  borderColor: "#ffc700",
+                  transition: { duration: 0.3 }
+                }}
               >
                 {/* Hover glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-orange/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

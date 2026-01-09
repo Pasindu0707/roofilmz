@@ -84,8 +84,11 @@ export default function ProcessSection() {
                 onMouseEnter={() => setHoveredFeature(index)}
                 onMouseLeave={() => setHoveredFeature(null)}
                 className="group relative bg-black border-2 border-brand-orange/20 rounded-2xl p-5 sm:p-6 md:p-8 overflow-hidden cursor-pointer"
-                whileHover={{ scale: 1.03, borderColor: "#ffc700" }}
-                transition={{ duration: 0.3 }}
+                whileHover={{ 
+                  scale: 1.03, 
+                  borderColor: "#ffc700",
+                  transition: { duration: 0.3 }
+                }}
               >
                 {/* Hover glow */}
                 <div className={`absolute inset-0 bg-gradient-to-br from-brand-orange/10 via-transparent to-transparent transition-opacity duration-500 ${hoveredFeature === index ? 'opacity-100' : 'opacity-0'}`} />
