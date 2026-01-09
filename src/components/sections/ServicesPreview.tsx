@@ -73,7 +73,7 @@ export default function ServicesPreview() {
               <div className="relative z-10">
                 <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center group-hover:bg-brand-orange/20 group-hover:scale-110 transition-all duration-300 flex-shrink-0">
-                    <Video className="text-brand-orange" size={24} className="sm:w-7 sm:h-7" />
+                    <Video className="text-brand-orange sm:w-7 sm:h-7" size={24} />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-bold text-brand-orange mb-3 sm:mb-4 group-hover:text-brand-orange transition-colors">
@@ -132,7 +132,7 @@ export default function ServicesPreview() {
                 
                 <div className="relative z-10">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-brand-orange/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                    <Megaphone className="text-brand-orange" size={20} className="sm:w-6 sm:h-6" />
+                    <Megaphone className="text-brand-orange sm:w-6 sm:h-6" size={20} />
                   </div>
                   <h4 className="text-lg sm:text-xl md:text-2xl font-display font-bold text-brand-orange mb-3 sm:mb-4 group-hover:text-brand-orange transition-colors">
                     Social Media Management
@@ -164,7 +164,7 @@ export default function ServicesPreview() {
                 
                 <div className="relative z-10">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-brand-orange/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                    <Globe className="text-brand-orange" size={20} className="sm:w-6 sm:h-6" />
+                    <Globe className="text-brand-orange sm:w-6 sm:h-6" size={20} />
                   </div>
                   <h4 className="text-lg sm:text-xl md:text-2xl font-display font-bold text-brand-orange mb-3 sm:mb-4 group-hover:text-brand-orange transition-colors">
                     Website & Digital Marketing

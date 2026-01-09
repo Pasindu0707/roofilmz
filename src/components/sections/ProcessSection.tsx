@@ -97,7 +97,7 @@ export default function ProcessSection() {
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-3 sm:mb-4">
                     <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center transition-all duration-300 flex-shrink-0 ${hoveredFeature === index ? 'bg-brand-orange/20 scale-110 rotate-6' : 'group-hover:bg-brand-orange/20 group-hover:scale-110'}`}>
-                      <step.icon className="text-brand-orange" size={20} className="sm:w-6 sm:h-6" />
+                      <step.icon className="text-brand-orange sm:w-6 sm:h-6" size={20} />
                     </div>
                     <span className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-brand-orange/20 group-hover:text-brand-orange/40 transition-colors">
                       {step.number}
